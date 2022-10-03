@@ -33,7 +33,6 @@ app.use(passport.initialize());
 app.use(passport.session());
  
 app.get('/success', (req, res) => {
-  //res.render('pages/success', {user: userProfile});
     MongoClient.connect(url, function(err, db) {
   if (err) throw err;
   var dbo = db.db("mydb");
@@ -48,7 +47,6 @@ app.get('/success', (req, res) => {
 });
 });
 app.post('/success',urlencodedParser, (req, res) => {
-  //res.render('pages/success', {user: userProfile});
   MongoClient.connect(url, function(err, db) {
 		  if (err) throw err;
 		  var dbo = db.db("mydb");
